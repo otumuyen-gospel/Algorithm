@@ -32,6 +32,7 @@ public class BinarySearch extends Thread{
         System.out.println(text+" : "+currentHour+":"+currentMinute+":"+currentSecond);
     }
     public void run(){
+        int iteration = 0;
         try{
             elapsedTime("StartTime");
             int low = 0; // the beginning element index
@@ -46,9 +47,10 @@ public class BinarySearch extends Thread{
                 }else{// reset and start search from the sequence of elements below middle element alone
                     high = middle;
                 }
+                iteration++;
                 Thread.sleep(1000);//search every 1 seconds
             }
-            System.out.println(index);
+            System.out.println("Data : "+data[index]+" : index :"+ index+ " : iteration : "+iteration);
             elapsedTime("EndTime");
         }catch(Exception e){
             e.printStackTrace();

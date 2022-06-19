@@ -37,7 +37,7 @@ public class LinearSearch extends Thread{
                 }
                 Thread.sleep(1000);//search every 0.1 seconds
             }
-            System.out.println(index);
+            System.out.println(data[index]+" found at index "+ index);
             elapsedTime("EndTime");
         }catch(Exception e){
             e.printStackTrace();
