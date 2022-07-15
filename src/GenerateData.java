@@ -1,5 +1,5 @@
 
-import java.util.Random;
+import java.util.*;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -11,12 +11,20 @@ import java.util.Random;
  * @author user1
  */
 public class GenerateData {
-    public static int[] data(int size){
-        int[]data = new int[size];
+    public static long[] dataArray(int size){
+        long[]data = new long[size];
         Random r = new Random();
         for(int i = 0; i < size; i++){
-            data[i] = 5+ r.nextInt(size+1);
+            data[i] = 5 + r.nextInt(size+1);
         }
         return data;
+    }
+    public static List dataList(int size){
+        List list = new ArrayList();
+        Random r = new Random();
+        for(int i = 0; i < size; i++){
+            list.add(5 + r.nextInt(size+1));
+        }
+        return list;
     }
 }
